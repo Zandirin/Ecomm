@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Will be changed before final deploy build and made secret!
-SECRET_KEY = 'django-insecure-*x3&q-g#^b*mqg+@@%tw((^sw3#(p)205z+$368t!trcm_z&0k'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['diploma-ecommerce-f0824f0395ba.herokuapp.com',
                  '8000-zandirin-ecomm-67qksyb592.us2.codeanyapp.com']
